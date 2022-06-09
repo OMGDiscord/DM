@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 // توكن البوت
-var token = "TOKEN PLS";
+var token = "OTYyNTMwMTYyNjAyMzExNzYw.Gh08Q2.502I9yTDXytTp1EtxJ7skh-D2T9W-cuuR8D7iA";
 // الاختصار المستخدم في الاوامر
 const prefix = "$";
 // نشاط البوت
@@ -62,7 +62,7 @@ const text = args.join(" ");
 										//msg += member.displayName;
 										//message.channel.send(member.displayName);
 										--sentsuccess;
-									})(sentsuccess);
+									})
 								}
 								else
 									++bots;
