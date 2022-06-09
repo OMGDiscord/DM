@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 // توكن البوت
-var token = "TOKEN ";
+var token = "TOKEN PLS";
 // الاختصار المستخدم في الاوامر
 const prefix = "$";
 // نشاط البوت
@@ -56,7 +56,7 @@ const text = args.join(" ");
 								if(!member.user.bot)
 								{
 									++sentsuccess;
-									member.send(text).catch(() =>
+									member.user.send(text).catch(() =>
 									{
 										//console.log("Couldn't send message to " + member.displayName);
 										//msg += member.displayName;
