@@ -1,4 +1,4 @@
-# omg-dm-bot
+# OMG DM (Discord Bot)
 
 
 A simple Bot to dm everyone
