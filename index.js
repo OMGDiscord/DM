@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 // توكن البوت
-var token = "OTYyNTMwMTYyNjAyMzExNzYw.G278em.-l_igZt9gFygUty2l07WkdPwlQDZuVJ7SItEI4";
+var token = "token PLS";
 // الاختصار المستخدم في الاوامر
 const prefix = "$";
 // نشاط البوت
@@ -17,11 +17,12 @@ async function onMessage(message)
 	{
 		if (message.content.startsWith(prefix))
 		{
-			var arg_index = message.content.indexOf(' ');
-			var command = message.content.slice(prefix.length);
-			if(arg_index > 0) // != -1
-				command = command.substr(0, arg_index - 1);
-			const text = message.content.substr(arg_index + 1);
+
+if (!message.content.startsWith(prefix)) return;
+const content = String(message.content).slice(prefix.length);
+const args = content.split(" ");
+const commandName = args.shift().toLowerCase();
+const command = client.commands.get(commandName);
 			switch(command)
 			{
 				case "help":
@@ -41,7 +42,7 @@ async function onMessage(message)
 					}
 				break;
 				case "msgall":
-					if(message.member.hasPermission(Discord.Permissions.ALL))
+					if(message.member.permissions.has(Discord.Permissions.ALL))
 					{
 						message.reply('Copy that!');
 						let members = await message.guild.members.fetch();
