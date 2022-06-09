@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 // توكن البوت
-var token = "TOKEN PLS";
+var token = "TOKEN ";
 // الاختصار المستخدم في الاوامر
 const prefix = "$";
 // نشاط البوت
@@ -19,9 +19,10 @@ async function onMessage(message)
 		{
 
 			if (!message.content.startsWith(prefix)) return;
-			const content = String(message.content).slice(prefix.length);
-			const args = content.split(" ");
-			const command = args.shift().toLowerCase();
+const content = String(message.content).slice(prefix.length);
+const args = content.split(" ");
+const command = args.shift().toLowerCase();
+const text = args.join(" ");
 			switch(command)
 			{
 				case "help":
